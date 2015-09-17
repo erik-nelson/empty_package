@@ -8,17 +8,17 @@ EmptyPackage::~EmptyPackage() {}
 
 bool EmptyPackage::Initialize(const ros::NodeHandle& n)
 {
-  name = ros::names::append(n.getNamespace(), "EmptyPackage");
+  name_ = ros::names::append(n.getNamespace(), "EmptyPackage");
 
   if (!LoadParameters(n))
   {
-    ROS_ERROR("%s: Failed to load parameters.", name.c_str());
+    ROS_ERROR("%s: Failed to load parameters.", name_.c_str());
     return false;
   }
 
   if (!RegisterCallbacks(n))
   {
-    ROS_ERROR("%s: Failed to register callbacks.", name.c_str());
+    ROS_ERROR("%s: Failed to register callbacks.", name_.c_str());
     return false;
   }
 

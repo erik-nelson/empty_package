@@ -1,0 +1,9 @@
+<launch>
+
+  <node name="empty_package"
+        pkg="empty_package"
+        type="empty_package_node"
+        output="screen">
+  </node>
+
+</launch>

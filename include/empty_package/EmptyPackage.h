@@ -14,7 +14,7 @@ class EmptyPackage {
   bool LoadParameters(const ros::NodeHandle& n);
   bool RegisterCallbacks(const ros::NodeHandle& n);
 
-  std::string name;
+  std::string name_;
 };
 
 #endif
