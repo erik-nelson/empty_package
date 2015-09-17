@@ -6,18 +6,15 @@ EmptyPackage::EmptyPackage() {}
 
 EmptyPackage::~EmptyPackage() {}
 
-bool EmptyPackage::Initialize(const ros::NodeHandle& n)
-{
+bool EmptyPackage::Initialize(const ros::NodeHandle& n) {
   name_ = ros::names::append(n.getNamespace(), "EmptyPackage");
 
-  if (!LoadParameters(n))
-  {
+  if (!LoadParameters(n)) {
     ROS_ERROR("%s: Failed to load parameters.", name_.c_str());
     return false;
   }
 
-  if (!RegisterCallbacks(n))
-  {
+  if (!RegisterCallbacks(n)) {
     ROS_ERROR("%s: Failed to register callbacks.", name_.c_str());
     return false;
   }
@@ -25,16 +22,13 @@ bool EmptyPackage::Initialize(const ros::NodeHandle& n)
   return true;
 }
 
-bool EmptyPackage::LoadParameters(const ros::NodeHandle& n)
-{
-  return true;
-}
+bool EmptyPackage::LoadParameters(const ros::NodeHandle& n) { return true; }
 
-bool EmptyPackage::RegisterCallbacks(const ros::NodeHandle& n)
-{
+bool EmptyPackage::RegisterCallbacks(const ros::NodeHandle& n) {
   ros::NodeHandle nl(n);
 
-  // pub = nl.advertise<geometry_msgs::WHATEVER>("topic_name", "topic_hz", false);
+  // pub = nl.advertise<geometry_msgs::WHATEVER>("topic_name", "topic_hz",
+  // false);
 
   return true;
 }
