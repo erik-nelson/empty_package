@@ -1,5 +1,5 @@
-#ifndef EMPTY_PACKAGE_H
-#define EMPTY_PACKAGE_H
+#ifndef __EMPTY_PACKAGE_H__
+#define __EMPTY_PACKAGE_H__
 
 #include <ros/ros.h>
 

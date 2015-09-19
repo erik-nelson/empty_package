@@ -1,5 +1,5 @@
 #include <ros/ros.h>
-#include <empty_package/EmptyPackage.h>
+#include <empty_package/empty_package.h>
 
 int main(int argc, char** argv) {
   ros::init(argc, argv, "empty_package");

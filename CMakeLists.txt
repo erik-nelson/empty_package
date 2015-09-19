@@ -23,7 +23,7 @@ link_directories(
   ${catkin_LIBRARY_DIRS}
 )
 
-add_library(${PROJECT_NAME} src/EmptyPackage.cc)
+add_library(${PROJECT_NAME} src/${PROJECT_NAME}.cc)
 
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}

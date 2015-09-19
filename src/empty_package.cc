@@ -1,4 +1,4 @@
-#include <empty_package/EmptyPackage.h>
+#include <empty_package/empty_package.h>
 
 #include <ros/ros.h>
 
@@ -7,7 +7,7 @@ EmptyPackage::EmptyPackage() {}
 EmptyPackage::~EmptyPackage() {}
 
 bool EmptyPackage::Initialize(const ros::NodeHandle& n) {
-  name_ = ros::names::append(n.getNamespace(), "EmptyPackage");
+  name_ = ros::names::append(n.getNamespace(), "empty_package");
 
   if (!LoadParameters(n)) {
     ROS_ERROR("%s: Failed to load parameters.", name_.c_str());
